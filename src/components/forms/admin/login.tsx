@@ -36,6 +36,7 @@ export const AdminLogin = React.memo(() => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       }}
+       
     >
       {/* Background Animation */}
       <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-[#7C00FF]/30 to-[#2CF19A]/30 blur-md"></div>
