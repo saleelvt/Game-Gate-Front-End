@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { ValidationLogin } from "../../../validation/admin/adminLogin";
 import { IAdminLogin } from "../../../interfaces/admin/login";
-import BgImg from "../../../assets/images/Group 105.jpg"
+// import  BgImg  from "../../../assets/images/footerbg.png";
+ 
+
 
 export const AdminLogin = React.memo(() => {
   const initialValues: IAdminLogin = {
@@ -30,7 +32,7 @@ export const AdminLogin = React.memo(() => {
     <div
       className="flex items-center px-6  justify-center min-h-screen relative overflow-hidden"
       style={{
-        backgroundImage: `url(${BgImg})`,
+        // backgroundImage: url(${BgImg}),
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -39,18 +41,23 @@ export const AdminLogin = React.memo(() => {
        
     >
       {/* Background Animation */}
-      <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-[#7C00FF]/30 to-[#2CF19A]/30 blur-md"></div>
+      <div className="absolute inset-0 animate-pulse  blur-md"></div>
       {/* Semi-transparent Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/0"></div>
+      <div className="absolute inset-0  adminlogin-background  " >
+        <div className="background-one   relative inset-0 flex justify-center items-start pt-[60px]">
+          <img alt="" className="w-[110px]" />
+        </div>
+        <div className="background-two"></div>
+      </div>
 
       {/* Form Container */}
       <div
-        className="relative z-10 flex flex-col opacity-90 items-center p-8 w-full max-w-md shadow-2xl rounded-md"
+        className="relative z-10 flex flex-col  items-center bg-white px-[40px] py-[65px] w-full max-w-md  admin-login-box  "
         style={{
-         backgroundImage:`url(${BgImg})`
+        //  backgroundImage: `url(${BgImg})`
         }}
       >
-        <h2 className="text-3xl font-bold mb-6 text-center text-white animate-bounce">
+        <h2 className="text-3xl font-bold mb-6 text-center   animate-bounce" style={{fontFamily:'Unbounded' , color:'#24288E'}}>
           Admin Login
         </h2>
         <form onSubmit={formik.handleSubmit} className="w-full">
@@ -58,7 +65,8 @@ export const AdminLogin = React.memo(() => {
           <div className="mb-6">
             <label
               htmlFor="email"
-              className="block text-lg font-medium text-gray-200 mb-2"
+              className="block text-[17px]   text-gray-600  mb-[2px]"
+               
             >
               Email
             </label>
@@ -66,7 +74,7 @@ export const AdminLogin = React.memo(() => {
               id="email"
               type="email"
               {...formik.getFieldProps("email")}
-              className="w-full px-4 py-2 text-lg border border-gray-300 rounded-lg bg-gray-300 text-gray-800 focus:ring-2 focus:ring-[#723077] focus:outline-none transition"
+              className="w-full px-4 py-2 text-lg border border-gray-300 rounded-lg   text-gray-800 focus:ring-2 focus:ring-[#723077] focus:outline-none transition"
             />
             {formik.touched.email && formik.errors.email && (
               <div className="text-red-400 text-sm mt-1">
@@ -76,16 +84,18 @@ export const AdminLogin = React.memo(() => {
           </div>
           <div className="mb-5 relative">
             <label
+             
               htmlFor="password"
-              className="block text-lg font-medium text-gray-200 mb-2"
+              className="block text-[17px]   text-gray-600  mb-[2px]"
             >
               Password
             </label>
             <input
               id="password"
+              
               type={showPassword ? "text" : "password"}
               {...formik.getFieldProps("password")}
-              className="w-full px-4 py-2 text-lg border border-gray-300 rounded-lg bg-gray-300 text-gray-800 focus:ring-2 focus:ring-[#723077] focus:outline-none transition"
+              className="w-full px-4 py-2 text-lg border border-gray-300 rounded-lg   text-gray-800 focus:ring-2 focus:ring-[#723077] focus:outline-none transition"
             />
             <span
               className="absolute inset-y-0 right-4 flex items-center cursor-pointer text-gray-400"
@@ -138,8 +148,9 @@ export const AdminLogin = React.memo(() => {
           {/* Submit Button */}
           <div className="text-center mt-6">
             <button
+            style={{backgroundColor:'#24288E', fontFamily:'Unbounded' }}
               type="submit"
-              className="w-full px-6 py-3 rounded-lg bg-gradient-to-b from-[#6330a1] via-[#4f2287] to-[#2d0f4e]
+              className="w-full px-6 py-3 rounded-[1000px]  
  text-white font-semibold text-lg hover:shadow-lg hover:scale-105 transform transition"
             >
               Login
@@ -147,6 +158,6 @@ export const AdminLogin = React.memo(() => {
           </div>
         </form>
       </div>
-    </div>
-  );
+   </div>
+);
 });
