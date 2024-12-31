@@ -10,17 +10,13 @@ export const axiosIn = axios.create({
   });
 
   
-  
 
-  export const loginAdmin= createAsyncThunk(
-    "admin/login",
+
+  
+  export const loginAdmin= createAsyncThunk( "admin/login",
     async (adminCredentials:IAdminLogin,{rejectWithValue})=>{
         try {
-            const { data } = await axiosIn.post(
-              `/admin/login`,
-              adminCredentials,
-              config
-            );
+            const { data } = await axiosIn.post(`/admin/login`,adminCredentials, config );
             return data.data;
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
           } catch (error: any) {

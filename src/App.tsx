@@ -1,36 +1,36 @@
+import React, { Fragment } from "react";
 
-import React,{Fragment} from "react"
-import { AdminLogin } from "./components/forms/admin/adminLogin"
 
-import { SignUp } from "./components/pages/welcome";
-import { Routes, Route, } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { UserLogin } from "./components/forms/user/userLogin";
-import { UserRegister } from "./components/forms/user/userRegister";
+import { UserRegister } from "./components/forms/user/userSignup";
+import { WelcomePage } from "./components/pages/welcome";
+import { PhoneVerification } from "./components/forms/user/phoneVerification";
+import EmailVerification from "./components/forms/user/emailVerification";
+import { PasswordChange } from "./components/forms/user/changePassword";
+import Category from "./components/pages/category";
+import About from "./components/pages/about";
+import { Toaster } from "react-hot-toast";
 
-import { Toaster } from "react-hot-toast"
+export const App: React.FC = React.memo(() => {
 
-
-export const App:React.FC = React.memo(()=>{
-
-
-  return ( 
+  return (
     <Fragment>
-        <Toaster position="top-center" />
-        <Routes>
-        <Route path="/" element={<SignUp/>} /> 
-        <Route path="/admin/register" element={<AdminLogin/>} /> 
-        <Route path="/admin/login" element={<AdminLogin/>} /> 
-
-
-
-
-
+      <Toaster position="top-center" />
+      <Routes>
+      <Route path='/' element={<WelcomePage/>} />
+        <Route path="/user/login" element={<UserLogin />} />
+        <Route path="/user/phoneVerification" element={<PhoneVerification />} />
+        <Route path="/user/emailVerification" element={<EmailVerification />} />
+        <Route path="/user/register" element={<UserRegister />} />
+        <Route path="/user/changePassword" element={<PasswordChange />} />
+        <Route path="/user/Category" element={<Category />} />
+        <Route path="/about" element={<About />} />
         
-        <Route path="/user/login" element={<UserLogin/>} /> 
-        <Route path="/user/register" element={<UserRegister/>} /> 
-   
       </Routes>
     </Fragment>
-  )
+  );
+});
 
-})
+
+
