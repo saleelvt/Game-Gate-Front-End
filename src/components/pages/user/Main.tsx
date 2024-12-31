@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import { FC, memo } from 'react';
 import HomeImg from '../../../assets/Images/homebg.png';
 
 import One from "../../../assets/Images/two.svg"
