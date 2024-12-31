@@ -6,6 +6,7 @@ import { IoClose } from "react-icons/io5";
 
 export const Navbar = React.memo(()=>{
   const [scrollY, setScrollY] = useState<number>(0);
+  
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<string>("");

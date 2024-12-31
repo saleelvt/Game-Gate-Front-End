@@ -1,4 +1,4 @@
-import React from 'react'
+
 import GameSectionOne from './about/GameSectionOne'
 import GameSectionTwo from './about/GameSectionTwo'
 import GameSectionThree from './about/GameSectionThree'

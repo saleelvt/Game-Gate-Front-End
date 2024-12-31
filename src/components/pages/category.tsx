@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CategorySectionOne from './category/CategorySectionOne'
 import CategorySectionTwo from './category/CategorySectionTwo'
 
