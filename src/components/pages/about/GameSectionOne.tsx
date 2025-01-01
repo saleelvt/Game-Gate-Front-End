@@ -1,7 +1,7 @@
 import React from 'react';
 import CardBackground from '../../../assets/Card/gamecardbg.png';
 import ClashofClans from '../../../assets/Card/clashofclans.png';
-
+ 
 
 
 const GameSectionOne: React.FC= React.memo(() => {

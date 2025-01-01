@@ -11,6 +11,7 @@ import { PasswordChange } from "./components/forms/user/changePassword";
 import Category from "./components/pages/category";
 import About from "./components/pages/about";
 import { Toaster } from "react-hot-toast";
+import ChatComponent from "./components/pages/user/chat";
 
 export const App: React.FC = React.memo(() => {
 
@@ -26,7 +27,8 @@ export const App: React.FC = React.memo(() => {
         <Route path="/user/changePassword" element={<PasswordChange />} />
         <Route path="/user/Category" element={<Category />} />
         <Route path="/about" element={<About />} />
-        
+        <Route path="/chat" element={<ChatComponent/>} />
+
       </Routes>
     </Fragment>
   );
