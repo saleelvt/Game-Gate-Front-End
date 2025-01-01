@@ -11,7 +11,7 @@ export const WelcomePage = React.memo(() => {
   return (
     <Fragment>
       <Navbar/>
-      <Main />
+      {/* <Main /> */}
       <GameCard />
       <FeaturedGiftCards />
       <AffiliateProgramSection/>

@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5";
 
 export const Navbar = React.memo(()=>{
   const [scrollY, setScrollY] = useState<number>(0);
-  
+
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<string>("");
@@ -41,7 +41,7 @@ export const Navbar = React.memo(()=>{
   return (
     <>
       <div
-        className='flex justify-center items-center text-white md:px-[90px] px-[30px] h-[90px] lg:gap-[20px] gap-[18px] header fixed top-0 left-0 w-full'
+        className='flex justify-center items-center text-white md:px-[90px] px-[30px] h-[80px] lg:gap-[20px] gap-[18px] header fixed top-0 left-0 w-full'
         style={{ background, zIndex: '10000' }}
       >
         <div className='text-[19px] font-semibold'>LOGO</div>
@@ -49,24 +49,24 @@ export const Navbar = React.memo(()=>{
           <input
             type="text"
             placeholder='Search for'
-            className='h-[48px] rounded-[1000px] header-inputbox'
+            className='h-[40px] rounded-[1000px] header-inputbox'
           />
-          <img src={Icon} alt="" className='absolute right-[16px] top-[12px]' />
+          <img src={Icon} alt="" className='absolute right-[16px] top-[8px]' />
         </div>
         <div className='flex justify-center items-center lg:gap-[20px] hidden lg:flex'>
           <button
-            className='lg:w-[100px] lg:h-[56px] country-button modal-country-button rounded-[1000px] lg:text-[19px]'
+            className='lg:w-[100px] lg:h-[48px] country-button modal-country-button rounded-[1000px] lg:text-[19px]'
             onClick={toggleModal}
           >
             IN
           </button>
           <button
-            className='lg:w-[228px] lg:h-[56px] country-button rounded-[1000px] lg:text-[19px]'
+            className='lg:w-[228px] lg:h-[48px] country-button rounded-[1000px] lg:text-[19px]'
           >
             Become a Seller
           </button>
           <button
-            className='lg:w-[228px] lg:h-[56px] login-signup-button rounded-[1000px] lg:text-[19px]'
+            className='lg:w-[228px] lg:h-[48px] login-signup-button rounded-[1000px] lg:text-[19px]'
           >
             Login / Signup
           </button>
