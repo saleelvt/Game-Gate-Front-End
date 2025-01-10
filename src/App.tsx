@@ -15,6 +15,8 @@ import ChatComponent from "./components/pages/user/chat";
 
 export const App: React.FC = React.memo(() => {
 
+
+
   return (
     <Fragment>
       <Toaster position="top-center" />
@@ -28,11 +30,11 @@ export const App: React.FC = React.memo(() => {
         <Route path="/user/Category" element={<Category />} />
         <Route path="/about" element={<About />} />
         <Route path="/chat" element={<ChatComponent/>} />
-
       </Routes>
     </Fragment>
   );
 });
+
 
 
 

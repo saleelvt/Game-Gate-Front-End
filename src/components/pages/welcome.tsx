@@ -12,6 +12,7 @@ export const WelcomePage = React.memo(() => {
   return (
     <Fragment>
       <Navbar/>
+      <h1 className="text-center text-white">saleel</h1>
       <Main/>
       <GameCard />
       <FeaturedGiftCards />
